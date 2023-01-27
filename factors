@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+
+
+import sys
+
+
+def factorise(x):
+    i = 2
+    while i <= int(x/2) + 1:
+        if x % i == 0:
+            p = int(x/i)
+            print('{:d}={:d}*{:d}'.format(x, p, i))
+            break
+        else:
+            i += 1
+
+
+if __name__ == "__main__":
+    f_name = sys.argv[1]
+    with open(f_name, 'r') as f:
+        for num in f:
+            factorise(int(num))
+
+
