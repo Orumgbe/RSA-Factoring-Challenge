@@ -20,5 +20,3 @@ if __name__ == "__main__":
     with open(f_name, 'r') as f:
         for num in f:
             factorise(int(num))
-
-
